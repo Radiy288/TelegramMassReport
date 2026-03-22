@@ -1,5 +1,44 @@
+import time,os,platform
+try:from prettytable import PrettyTable
+except:os.system("pip install prettytable")
+rd, gn, lgn, yw, lrd, be, pe = '\033[00;31m', '\033[00;32m', '\033[01;32m', '\033[01;33m', '\033[01;31m', '\033[94m', '\033[01;35m'
+cn, k,g = '\033[00;36m', '\033[90m','\033[38;5;130m'
+def re(text):
+    for char in text:
+        print(char, end='', flush=True)
+        time.sleep(0.001)  
+if 'Windows' in platform.uname():
+    from colorama import init
+    init()
+else:
+    pass
+banner = f"""
+                                                                 
+{k}                                                                                  
+        {be}TELEGRAM {k} {lrd}REPORTER{k} {g}AMBOT{k} {cn}@AMBOTYT{k} 
 
+ █████╗ ███╗   ███╗██████╗  ██████╗ ████████╗
+██╔══██╗████╗ ████║██╔══██╗██╔═══██╗╚══██╔══╝
+███████║██╔████╔██║██████╔╝██║   ██║   ██║   
+██╔══██║██║╚██╔╝██║██╔══██╗██║   ██║   ██║   
+██║  ██║██║ ╚═╝ ██║██████╔╝╚██████╔╝   ██║   
+╚═╝  ╚═╝╚═╝     ╚═╝╚═════╝  ╚═════╝    ╚═╝   
+                                             
+"""
 
-#Encrypted By AMBOT
-import base64
-exec(base64.b64decode('aW1wb3J0IHRpbWUsb3MscGxhdGZvcm0KdHJ5OmZyb20gcHJldHR5dGFibGUgaW1wb3J0IFByZXR0eVRhYmxlCmV4Y2VwdDpvcy5zeXN0ZW0oInBpcCBpbnN0YWxsIHByZXR0eXRhYmxlIikKcmQsIGduLCBsZ24sIHl3LCBscmQsIGJlLCBwZSA9ICdcMDMzWzAwOzMxbScsICdcMDMzWzAwOzMybScsICdcMDMzWzAxOzMybScsICdcMDMzWzAxOzMzbScsICdcMDMzWzAxOzMxbScsICdcMDMzWzk0bScsICdcMDMzWzAxOzM1bScKY24sIGssZyA9ICdcMDMzWzAwOzM2bScsICdcMDMzWzkwbScsJ1wwMzNbMzg7NTsxMzBtJwpkZWYgcmUodGV4dCk6CiAgICBmb3IgY2hhciBpbiB0ZXh0OgogICAgICAgIHByaW50KGNoYXIsIGVuZD0nJywgZmx1c2g9VHJ1ZSkKICAgICAgICB0aW1lLnNsZWVwKDAuMDAxKSAgCmlmICdXaW5kb3dzJyBpbiBwbGF0Zm9ybS51bmFtZSgpOgogICAgZnJvbSBjb2xvcmFtYSBpbXBvcnQgaW5pdAogICAgaW5pdCgpCmVsc2U6CiAgICBwYXNzCmJhbm5lciA9IGYiIiIKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKe2t9ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgIHtiZX1URUxFR1JBTSB7a30ge2xyZH1SRVBPUlRFUntrfSB7Z31BTUJPVHtrfSB7Y259QEFNQk9UWVR7a30gCgog4paI4paI4paI4paI4paI4pWXIOKWiOKWiOKWiOKVlyAgIOKWiOKWiOKWiOKVl+KWiOKWiOKWiOKWiOKWiOKWiOKVlyAg4paI4paI4paI4paI4paI4paI4pWXIOKWiOKWiOKWiOKWiOKWiOKWiOKWiOKWiOKVlwrilojilojilZTilZDilZDilojilojilZfilojilojilojilojilZcg4paI4paI4paI4paI4pWR4paI4paI4pWU4pWQ4pWQ4paI4paI4pWX4paI4paI4pWU4pWQ4pWQ4pWQ4paI4paI4pWX4pWa4pWQ4pWQ4paI4paI4pWU4pWQ4pWQ4pWdCuKWiOKWiOKWiOKWiOKWiOKWiOKWiOKVkeKWiOKWiOKVlOKWiOKWiOKWiOKWiOKVlOKWiOKWiOKVkeKWiOKWiOKWiOKWiOKWiOKWiOKVlOKVneKWiOKWiOKVkSAgIOKWiOKWiOKVkSAgIOKWiOKWiOKVkSAgIArilojilojilZTilZDilZDilojilojilZHilojilojilZHilZrilojilojilZTilZ3ilojilojilZHilojilojilZTilZDilZDilojilojilZfilojilojilZEgICDilojilojilZEgICDilojilojilZEgICAK4paI4paI4pWRICDilojilojilZHilojilojilZEg4pWa4pWQ4pWdIOKWiOKWiOKVkeKWiOKWiOKWiOKWiOKWiOKWiOKVlOKVneKVmuKWiOKWiOKWiOKWiOKWiOKWiOKVlOKVnSAgIOKWiOKWiOKVkSAgIArilZrilZDilZ0gIOKVmuKVkOKVneKVmuKVkOKVnSAgICAg4pWa4pWQ4pWd4pWa4pWQ4pWQ4pWQ4pWQ4pWQ4pWdICDilZrilZDilZDilZDilZDilZDilZ0gICAg4pWa4pWQ4pWdICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAoiIiIKCnJlKGJhbm5lcikKcmUoIldhcm5pbmcgISBUaGlzIGlzIGEgdGVzdCByZXBvcnRlciwgYW55IG9mZmVuc2UgaXMgdGhlIHJlc3BvbnNpYmlsaXR5IG9mIHRoZSB1c2VyICEiKQpwcmludCAoZiJ7bHJkfSIpCnQgPSBQcmV0dHlUYWJsZShbZid7Y259TnVtYmVye2xyZH0nLGYne2NufWluZm97bHJkfSddKQp0LmFkZF9yb3coW2Yne2xnbn0xe2xyZH0nLGYne2dufVJlcG9ydGVyIENoYW5uZWx7bHJkfSddKQp0LmFkZF9yb3coW2Yne2xnbn0ye2xyZH0nLGYne2dufVJlcG9ydGVyIEFjY291bnR7bHJkfSddKQp0LmFkZF9yb3coW2Yne2xnbn0ze2xyZH0nLGYne2dufVJlcG9ydGVyIEdyb3VwIFtVcGRhdGluZ117bHJkfSddKQpwcmludCAodCkKCm51bWJlciA9IGlucHV0KGYie2dufUVudGVyIE51bWJlciA6IHtjbn0iKQppZiBudW1iZXIgPT0gIjEiOgogICAgb3Muc3lzdGVtKCJweXRob24gcmVwb3J0L3JlcG9ydGVyLnB5IikKaWYgbnVtYmVyID09ICIyIjoKCW9zLnN5c3RlbSgicHl0aG9uIHJlcG9ydC9yZXBvcnQucHkiKQplbGlmIG51bWJlciA9PSAiMyI6CiAgICBwcmludCAoIlRoaXMgc2VjdGlvbiBpcyBiZWluZyB1cGRhdGVkIGFuZCB3aWxsIGJlIGFkZGVkIHNvb24gXG5cbkNoYW5uZWwgOiBAZXNmZWx1cm0iKQo='))
+re(banner)
+re("Warning ! This is a test reporter, any offense is the responsibility of the user !")
+print (f"{lrd}")
+t = PrettyTable([f'{cn}Number{lrd}',f'{cn}info{lrd}'])
+t.add_row([f'{lgn}1{lrd}',f'{gn}Reporter Channel{lrd}'])
+t.add_row([f'{lgn}2{lrd}',f'{gn}Reporter Account{lrd}'])
+t.add_row([f'{lgn}3{lrd}',f'{gn}Reporter Group [Updating]{lrd}'])
+print (t)
+
+number = input(f"{gn}Enter Number : {cn}")
+if number == "1":
+    os.system("python report/reporter.py")
+if number == "2":
+	os.system("python report/report.py")
+elif number == "3":
+    print ("This section is being updated and will be added soon \n\nChannel : @esfelurm")
