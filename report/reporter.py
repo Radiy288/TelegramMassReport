@@ -1,5 +1,167 @@
+import os,time,platform
+try:from telethon.sync import TelegramClient
+except:os.system("pip install telethon")
+from telethon.tl import types
+from telethon import functions
+from prettytable import PrettyTable
+def re(text):
+    for char in text:
+        print(char, end='', flush=True)
+        time.sleep(0.001)  
+        
+rd, gn, lgn, yw, lrd, be, pe = '\033[00;31m', '\033[00;32m', '\033[01;32m', '\033[01;33m', '\033[01;31m', '\033[94m', '\033[01;35m'
+cn, k,g = '\033[00;36m', '\033[90m','\033[38;5;130m'
+print (f"{lrd}")
+t = PrettyTable([f'{cn}Number{lrd}',f'{cn}Method{lrd}'])
+t.add_row([f'{lgn}1{lrd}',f'{gn}Report Spam{lrd}'])
+t.add_row([f'{lgn}2{lrd}',f'{gn}Reporter Other{lrd}'])
+t.add_row([f'{lgn}3{lrd}',f'{gn}Reporter Violence{lrd}'])
+t.add_row([f'{lgn}4{lrd}',f'{gn}Reporter Pornography{lrd}'])
+t.add_row([f'{lgn}5{lrd}',f'{gn}Reporter Copyright{lrd}'])
+t.add_row([f'{lgn}6{lrd}',f'{gn}Reporter Fake{lrd}'])
+t.add_row([f'{lgn}7{lrd}',f'{gn}Reporter Geo Irrelevant{lrd}'])
+t.add_row([f'{lgn}8{lrd}',f'{gn}Reporter Illegal Drugs{lrd}'])
+t.add_row([f'{lgn}9{lrd}',f'{gn}Reporter Personal Details{lrd}'])
+def clear():
+    if 'Windows' in platform.uname():
+    	try:from colorama import init
+    	except:os.system("pip install colorama")
+    	init()
+    	os.system("cls")
+    elif 'Windows' not in platform.uname():
+        os.system("clear")
+clear()
+re(f"""{g}
+ █████╗ ███╗   ███╗██████╗  ██████╗ ████████╗
+██╔══██╗████╗ ████║██╔══██╗██╔═══██╗╚══██╔══╝
+███████║██╔████╔██║██████╔╝██║   ██║   ██║   
+██╔══██║██║╚██╔╝██║██╔══██╗██║   ██║   ██║   
+██║  ██║██║ ╚═╝ ██║██████╔╝╚██████╔╝   ██║   
+╚═╝  ╚═╝╚═╝     ╚═╝╚═════╝  ╚═════╝    ╚═╝   
+                                             
+""")
+account = f"""{k}
+ ____                             _               
+|  _ \   ___  _ __    ___   _ __ | |_   ___  _ __ 
+| |_) | / _ \| '_ \  / _ \ | '__|| __| / _ \| '__|
+|  _ < |  __/| |_) || (_) || |   | |_ |  __/| |    {cn}Channel{k}
+|_| \_\ \___|| .__/  \___/ |_|    \__| \___||_|   
+             |_|	
 
-
-#Encrypted By AMBOT
-import base64
-exec(base64.b64decode('aW1wb3J0IG9zLHRpbWUscGxhdGZvcm0KdHJ5OmZyb20gdGVsZXRob24uc3luYyBpbXBvcnQgVGVsZWdyYW1DbGllbnQKZXhjZXB0Om9zLnN5c3RlbSgicGlwIGluc3RhbGwgdGVsZXRob24iKQpmcm9tIHRlbGV0aG9uLnRsIGltcG9ydCB0eXBlcwpmcm9tIHRlbGV0aG9uIGltcG9ydCBmdW5jdGlvbnMKZnJvbSBwcmV0dHl0YWJsZSBpbXBvcnQgUHJldHR5VGFibGUKZGVmIHJlKHRleHQpOgogICAgZm9yIGNoYXIgaW4gdGV4dDoKICAgICAgICBwcmludChjaGFyLCBlbmQ9JycsIGZsdXNoPVRydWUpCiAgICAgICAgdGltZS5zbGVlcCgwLjAwMSkgIAogICAgICAgIApyZCwgZ24sIGxnbiwgeXcsIGxyZCwgYmUsIHBlID0gJ1wwMzNbMDA7MzFtJywgJ1wwMzNbMDA7MzJtJywgJ1wwMzNbMDE7MzJtJywgJ1wwMzNbMDE7MzNtJywgJ1wwMzNbMDE7MzFtJywgJ1wwMzNbOTRtJywgJ1wwMzNbMDE7MzVtJwpjbiwgayxnID0gJ1wwMzNbMDA7MzZtJywgJ1wwMzNbOTBtJywnXDAzM1szODs1OzEzMG0nCnByaW50IChmIntscmR9IikKdCA9IFByZXR0eVRhYmxlKFtmJ3tjbn1OdW1iZXJ7bHJkfScsZid7Y259TWV0aG9ke2xyZH0nXSkKdC5hZGRfcm93KFtmJ3tsZ259MXtscmR9JyxmJ3tnbn1SZXBvcnQgU3BhbXtscmR9J10pCnQuYWRkX3JvdyhbZid7bGdufTJ7bHJkfScsZid7Z259UmVwb3J0ZXIgT3RoZXJ7bHJkfSddKQp0LmFkZF9yb3coW2Yne2xnbn0ze2xyZH0nLGYne2dufVJlcG9ydGVyIFZpb2xlbmNle2xyZH0nXSkKdC5hZGRfcm93KFtmJ3tsZ259NHtscmR9JyxmJ3tnbn1SZXBvcnRlciBQb3Jub2dyYXBoeXtscmR9J10pCnQuYWRkX3JvdyhbZid7bGdufTV7bHJkfScsZid7Z259UmVwb3J0ZXIgQ29weXJpZ2h0e2xyZH0nXSkKdC5hZGRfcm93KFtmJ3tsZ259NntscmR9JyxmJ3tnbn1SZXBvcnRlciBGYWtle2xyZH0nXSkKdC5hZGRfcm93KFtmJ3tsZ259N3tscmR9JyxmJ3tnbn1SZXBvcnRlciBHZW8gSXJyZWxldmFudHtscmR9J10pCnQuYWRkX3JvdyhbZid7bGdufTh7bHJkfScsZid7Z259UmVwb3J0ZXIgSWxsZWdhbCBEcnVnc3tscmR9J10pCnQuYWRkX3JvdyhbZid7bGdufTl7bHJkfScsZid7Z259UmVwb3J0ZXIgUGVyc29uYWwgRGV0YWlsc3tscmR9J10pCmRlZiBjbGVhcigpOgogICAgaWYgJ1dpbmRvd3MnIGluIHBsYXRmb3JtLnVuYW1lKCk6CiAgICAJdHJ5OmZyb20gY29sb3JhbWEgaW1wb3J0IGluaXQKICAgIAlleGNlcHQ6b3Muc3lzdGVtKCJwaXAgaW5zdGFsbCBjb2xvcmFtYSIpCiAgICAJaW5pdCgpCiAgICAJb3Muc3lzdGVtKCJjbHMiKQogICAgZWxpZiAnV2luZG93cycgbm90IGluIHBsYXRmb3JtLnVuYW1lKCk6CiAgICAgICAgb3Muc3lzdGVtKCJjbGVhciIpCmNsZWFyKCkKcmUoZiIiIntnfQog4paI4paI4paI4paI4paI4pWXIOKWiOKWiOKWiOKVlyAgIOKWiOKWiOKWiOKVl+KWiOKWiOKWiOKWiOKWiOKWiOKVlyAg4paI4paI4paI4paI4paI4paI4pWXIOKWiOKWiOKWiOKWiOKWiOKWiOKWiOKWiOKVlwrilojilojilZTilZDilZDilojilojilZfilojilojilojilojilZcg4paI4paI4paI4paI4pWR4paI4paI4pWU4pWQ4pWQ4paI4paI4pWX4paI4paI4pWU4pWQ4pWQ4pWQ4paI4paI4pWX4pWa4pWQ4pWQ4paI4paI4pWU4pWQ4pWQ4pWdCuKWiOKWiOKWiOKWiOKWiOKWiOKWiOKVkeKWiOKWiOKVlOKWiOKWiOKWiOKWiOKVlOKWiOKWiOKVkeKWiOKWiOKWiOKWiOKWiOKWiOKVlOKVneKWiOKWiOKVkSAgIOKWiOKWiOKVkSAgIOKWiOKWiOKVkSAgIArilojilojilZTilZDilZDilojilojilZHilojilojilZHilZrilojilojilZTilZ3ilojilojilZHilojilojilZTilZDilZDilojilojilZfilojilojilZEgICDilojilojilZEgICDilojilojilZEgICAK4paI4paI4pWRICDilojilojilZHilojilojilZEg4pWa4pWQ4pWdIOKWiOKWiOKVkeKWiOKWiOKWiOKWiOKWiOKWiOKVlOKVneKVmuKWiOKWiOKWiOKWiOKWiOKWiOKVlOKVnSAgIOKWiOKWiOKVkSAgIArilZrilZDilZ0gIOKVmuKVkOKVneKVmuKVkOKVnSAgICAg4pWa4pWQ4pWd4pWa4pWQ4pWQ4pWQ4pWQ4pWQ4pWdICDilZrilZDilZDilZDilZDilZDilZ0gICAg4pWa4pWQ4pWdICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAoiIiIpCmFjY291bnQgPSBmIiIie2t9CiBfX19fICAgICAgICAgICAgICAgICAgICAgICAgICAgICBfICAgICAgICAgICAgICAgCnwgIF8gXCAgIF9fXyAgXyBfXyAgICBfX18gICBfIF9fIHwgfF8gICBfX18gIF8gX18gCnwgfF8pIHwgLyBfIFx8ICdfIFwgIC8gXyBcIHwgJ19ffHwgX198IC8gXyBcfCAnX198CnwgIF8gPCB8ICBfXy98IHxfKSB8fCAoXykgfHwgfCAgIHwgfF8gfCAgX18vfCB8ICAgIHtjbn1DaGFubmVse2t9CnxffCBcX1wgXF9fX3x8IC5fXy8gIFxfX18vIHxffCAgICBcX198IFxfX198fF98ICAgCiAgICAgICAgICAgICB8X3wJCgoJe2xyZH1be2xnbn0re2xyZH1dIHtnbn1DaGFubmVsIDoge2xnbn1AQU1CT1RZVAkKCQkJIiIiCSAKCQkJCmNsYXNzIFRlbGVncmFtUmVwb3J0ZXI6CiAgICBkZWYgX19pbml0X18oc2VsZik6CiAgICAgICAgc2VsZi5hcGlfaWQgPSBpbnB1dChmIntscmR9W3tsZ259K3tscmR9XSB7Z259RW50ZXIgQXBpIGlkIGFjY291bnQ6IHtnfSIpCiAgICAgICAgc2VsZi5hcGlfaGFzaCA9IGlucHV0KGYie2xyZH1be2xnbn0re2xyZH1dIHtnbn1FbnRlciBBcGkgaGFzaCBhY2NvdW50OiB7Z30iKQogICAgICAgIHNlbGYucGhvbmVfbnVtYmVyID0gaW5wdXQoZiJ7bHJkfVt7bGdufSt7bHJkfV0ge2dufUVudGVyIHBob25lIGFjY291bnQ6e2d9ICIpCiAgICAgICAgY2xlYXIoKQogICAgICAgIHJlKGFjY291bnQpCiAgICAgICAgcHJpbnQgKGYie2xyZH0iKQogICAgICAgIHByaW50ICh0KQogICAgICAgIHNlbGYubWV0aG9kID0gaW5wdXQoZiJ7bHJkfVt7bGdufT97bHJkfV0ge2dufUNob29zZSBhIG1ldGhvZCA6IHtrfSIpCiAgICAgICAgc2VsZi5jaGFubmVsX3VzZXJuYW1lID0gaW5wdXQoZiJ7bHJkfVt7bGdufSt7bHJkfV0ge2dufUVudGVyIHVzZXJuYW1lIGNoYW5uZWwge2t9IikKICAgICAgICBzZWxmLm51bWJlciA9IGlucHV0KGYie2xyZH1be2xnbn0re2xyZH1dIHtnbn1OdW1iZXIgb2YgcmVwb3J0czoge2t9IikKICAgICAgICBzZWxmLmNsaWVudCA9IFRlbGVncmFtQ2xpZW50KCdzZXNzaW9uJywgc2VsZi5hcGlfaWQsIHNlbGYuYXBpX2hhc2gpCiAgICBkZWYgcmVwb3J0X2NoYW5uZWwoc2VsZik6CiAgICAgICAgd2l0aCBzZWxmLmNsaWVudCBhcyBjbGllbnQ6CiAgICAgICAgICAgIGNsaWVudC5jb25uZWN0KCkKICAgICAgICAgICAgaWYgbm90IGNsaWVudC5pc191c2VyX2F1dGhvcml6ZWQoKToKICAgICAgICAgICAgICAgIGNsaWVudC5zZW5kX2NvZGVfcmVxdWVzdChzZWxmLnBob25lX251bWJlcikKICAgICAgICAgICAgICAgIGNsaWVudC5zaWduX2luKHNlbGYucGhvbmVfbnVtYmVyLCBpbnB1dCgnRW50ZXIgdGhlIGNvZGU6ICcpKQogICAgICAgICAgICB0cnk6Y2hhbm5lbF9lbnRpdHkgPSBjbGllbnQuZ2V0X2VudGl0eShzZWxmLmNoYW5uZWxfdXNlcm5hbWUpCiAgICAgICAgICAgIGV4Y2VwdDpwcmludCAoZiJ7bHJkfVVzZXJuYW1lIGRvZXMgbm90IGV4aXN0IikKICAgICAgICAgICAgaWYgc2VsZi5tZXRob2QgPT0gIjEiOgogICAgICAgICAgICAgICAgbWVzc2FnZSA9ICJUaGlzIGNoYW5uZWwgY29udGFpbnMgc3BhbSBjb250ZW50LiIKICAgICAgICAgICAgICAgIGZvciBfIGluIHJhbmdlKDAsaW50KHNlbGYubnVtYmVyKSk6IAogICAgICAgICAgICAgICAgICAgIHJlc3VsdCA9IGNsaWVudChmdW5jdGlvbnMubWVzc2FnZXMuUmVwb3J0UmVxdWVzdCgKICAgICAgICAgICAgICAgICAgICBwZWVyPWNoYW5uZWxfZW50aXR5LAogICAgICAgICAgICAgICAgICAgIGlkPVs0Ml0sCiAgICAgICAgICAgICAgICAgICAgcmVhc29uPXR5cGVzLklucHV0UmVwb3J0UmVhc29uU3BhbSgpLAogICAgICAgICAgICAgICAgICAgIG1lc3NhZ2U9bWVzc2FnZQogICAgICAgICAgICAgICAgKSkKICAgICAgICAgICAgICAgICAgICBwcmludCAoZiJ7bHJkfVt7bGdufSt7bHJkfV0ge2dufUEgc3BhbSByZXBvcnQgaGFzIGJlZW4gc2VudCIpICAgICAgICAgICAgCiAgICAgICAgICAgIGVsaWYgc2VsZi5tZXRob2QgPT0gIjIiOgogICAgICAgICAgICAgICAgbWVzc2FnZSA9IGlucHV0KGYie2xyZH1be2xnbn0re2xyZH1dIHtnbn1FbnRlciB5b3VyIG1lc3NhZ2U6IHtnfSIpCiAgICAgICAgICAgICAgICBmb3IgXyBpbiByYW5nZSgwLGludChzZWxmLm51bWJlcikpOiAKICAgICAgICAgICAgICAgICAgICAgcmVzdWx0ID0gY2xpZW50KGZ1bmN0aW9ucy5tZXNzYWdlcy5SZXBvcnRSZXF1ZXN0KAogICAgICAgICAgICAgICAgICAgIHBlZXI9Y2hhbm5lbF9lbnRpdHksCiAgICAgICAgICAgICAgICAgICAgaWQ9WzQyXSwKICAgICAgICAgICAgICAgICAgICByZWFzb249dHlwZXMuSW5wdXRSZXBvcnRSZWFzb25PdGhlcigpLAogICAgICAgICAgICAgICAgICAgIG1lc3NhZ2U9bWVzc2FnZQogICAgICAgICAgICAgICAgKSkKICAgICAgICAgICAgICAgICAgICAgcHJpbnQgKGYiXHtscmR9W3tsZ259K3tscmR9XSB7Z259QSBPdGhlciByZXBvcnQgaGFzIGJlZW4gc2VudCIpCiAgICAgICAgICAgIGVsaWYgc2VsZi5tZXRob2QgPT0gIjMiOgogICAgICAgICAgICAgICAgbWVzc2FnZSA9ICJUaGlzIGNoYW5uZWwgY29udGFpbnMgdmlvbGVudCBjb250ZW50LiIgICAgICAgICAgICAKICAgICAgICAgICAgICAgIGZvciBfIGluIHJhbmdlKDAsaW50KHNlbGYubnVtYmVyKSk6IAogICAgICAgICAgICAgICAgICAgICByZXN1bHQgPSBjbGllbnQoZnVuY3Rpb25zLm1lc3NhZ2VzLlJlcG9ydFJlcXVlc3QoCiAgICAgICAgICAgICAgICAgICAgcGVlcj1jaGFubmVsX2VudGl0eSwKICAgICAgICAgICAgICAgICAgICBpZD1bNDJdLAogICAgICAgICAgICAgICAgICAgIHJlYXNvbj10eXBlcy5JbnB1dFJlcG9ydFJlYXNvblZpb2xlbmNlKCksCiAgICAgICAgICAgICAgICAgICAgbWVzc2FnZT1tZXNzYWdlCiAgICAgICAgICAgICAgICApKQogICAgICAgICAgICAgICAgICAgICBwcmludCAoZiJce2xyZH1be2xnbn0re2xyZH1dIHtnbn1BIFZpb2xlbmNlIHJlcG9ydCBoYXMgYmVlbiBzZW50IikgCiAgICAgICAgICAgIGVsaWYgc2VsZi5tZXRob2QgPT0gIjQiOgogICAgICAgICAgICAgICAgbWVzc2FnZSA9ICJUaGlzIGNoYW5uZWwgaGFzIHBvcm5vZ3JhcGhpYyBjb250ZW50IgogICAgICAgICAgICAgICAgZm9yIF8gaW4gcmFuZ2UoMCxpbnQoc2VsZi5udW1iZXIpKTogCiAgICAgICAgICAgICAgICAgICAgcmVzdWx0ID0gY2xpZW50KGZ1bmN0aW9ucy5tZXNzYWdlcy5SZXBvcnRSZXF1ZXN0KAogICAgICAgICAgICAgICAgICAgIHBlZXI9Y2hhbm5lbF9lbnRpdHksCiAgICAgICAgICAgICAgICAgICAgaWQ9WzQyXSwKICAgICAgICAgICAgICAgICAgICByZWFzb249dHlwZXMuSW5wdXRSZXBvcnRSZWFzb25Qb3Jub2dyYXBoeSgpLAogICAgICAgICAgICAgICAgICAgIG1lc3NhZ2U9bWVzc2FnZQogICAgICAgICAgICAgICAgKSkKICAgICAgICAgICAgICAgICAgICBwcmludCAoZiJ7bHJkfVt7bGdufSt7bHJkfV0ge2dufUEgUG9ybm9nYXBoeSByZXBvcnQgaGFzIGJlZW4gc2VudCIpCiAgICAgICAgICAgIGVsaWYgc2VsZi5tZXRob2QgPT0gIjUiOgogICAgICAgICAgICAgICAgbWVzc2FnZSA9ICJCbG9jayB0aGlzIGNoYW5uZWwgZHVlIHRvIGNvcHlyaWdodCIgICAgICAgICAgICAKICAgICAgICAgICAgICAgIGZvciBfIGluIHJhbmdlKDAsaW50KHNlbGYubnVtYmVyKSk6IAogICAgICAgICAgICAgICAgICAgIHJlc3VsdCA9IGNsaWVudChmdW5jdGlvbnMubWVzc2FnZXMuUmVwb3J0UmVxdWVzdCgKICAgICAgICAgICAgICAgICAgICBwZWVyPWNoYW5uZWxfZW50aXR5LAogICAgICAgICAgICAgICAgICAgIGlkPVs0Ml0sCiAgICAgICAgICAgICAgICAgICAgcmVhc29uPXR5cGVzLklucHV0UmVwb3J0UmVhc29uQ29weXJpZ2h0KCksCiAgICAgICAgICAgICAgICAgICAgbWVzc2FnZT1tZXNzYWdlCiAgICAgICAgICAgICAgICApKQogICAgICAgICAgICAgICAgICAgIHByaW50IChmIntscmR9W3tsZ259K3tscmR9XSB7Z259QSBDb3B5IHJpZ2h0IHJlcG9ydCBoYXMgYmVlbiBzZW50IikKICAgICAgICAgICAgZWxpZiBzZWxmLm1ldGhvZCA9PSAiNiI6CiAgICAgICAgICAgICAgICBtZXNzYWdlID0gIkJsb2NrIHRoaXMgY2hhbm5lbCBkdWUgdG8gc2NhbSBhbmQgaW1wZXJzb25hdGlvbiIgICAgICAgICAgICAKICAgICAgICAgICAgICAgIGZvciBfIGluIHJhbmdlKDAsaW50KHNlbGYubnVtYmVyKSk6IAogICAgICAgICAgICAgICAgICAgIHJlc3VsdCA9IGNsaWVudChmdW5jdGlvbnMubWVzc2FnZXMuUmVwb3J0UmVxdWVzdCgKICAgICAgICAgICAgICAgICAgICBwZWVyPWNoYW5uZWxfZW50aXR5LAogICAgICAgICAgICAgICAgICAgIGlkPVs0Ml0sCiAgICAgICAgICAgICAgICAgICAgcmVhc29uPXR5cGVzLklucHV0UmVwb3J0UmVhc29uRmFrZSgpLAogICAgICAgICAgICAgICAgICAgIG1lc3NhZ2U9bWVzc2FnZQogICAgICAgICAgICAgICAgKSkKICAgICAgICAgICAgICAgICAgICBwcmludCAoZiJ7bHJkfVt7bGdufSt7bHJkfV0ge2dufUEgRmFrZSByZXBvcnQgaGFzIGJlZW4gc2VudCAiKQogICAgICAgICAgICBlbGlmIHNlbGYubWV0aG9kID09ICI3IjoKICAgICAgICAgICAgICAgIG1lc3NhZ2UgPSAiQmxvY2sgdGhpcyBjaGFubmVsIGR1ZSB0byBpcnJlbGV2YW50IGdlbyAiICAgICAgICAgICAgCiAgICAgICAgICAgICAgICBmb3IgXyBpbiByYW5nZSgwLGludChzZWxmLm51bWJlcikpOiAKICAgICAgICAgICAgICAgICAgICByZXN1bHQgPSBjbGllbnQoZnVuY3Rpb25zLm1lc3NhZ2VzLlJlcG9ydFJlcXVlc3QoCiAgICAgICAgICAgICAgICAgICAgcGVlcj1jaGFubmVsX2VudGl0eSwKICAgICAgICAgICAgICAgICAgICBpZD1bNDJdLAogICAgICAgICAgICAgICAgICAgIHJlYXNvbj10eXBlcy5JbnB1dFJlcG9ydFJlYXNvbkdlb0lycmVsZXZhbnQoKSwKICAgICAgICAgICAgICAgICAgICBtZXNzYWdlPW1lc3NhZ2UKICAgICAgICAgICAgICAgICkpCiAgICAgICAgICAgICAgICAgICAgcHJpbnQgKGYie2xyZH1be2xnbn0re2xyZH1dIHtnbn1BIEdlbyBJcnJlbGV2YW50IHJlcG9ydCBoYXMgYmVlbiBzZW50IikKICAgICAgICAgICAgZWxpZiBzZWxmLm1ldGhvZCA9PSAiOCI6CiAgICAgICAgICAgICAgICBtZXNzYWdlID0gIkJsb2NrIHRoaXMgY2hhbm5lbCBiZWNhdXNlIG9mIElsbGVnYWxEcnVncyAiICAgICAgICAgICAgCiAgICAgICAgICAgICAgICBmb3IgXyBpbiByYW5nZSgwLGludChzZWxmLm51bWJlcikpOiAKICAgICAgICAgICAgICAgICAgICByZXN1bHQgPSBjbGllbnQoZnVuY3Rpb25zLm1lc3NhZ2VzLlJlcG9ydFJlcXVlc3QoCiAgICAgICAgICAgICAgICAgICAgcGVlcj1jaGFubmVsX2VudGl0eSwKICAgICAgICAgICAgICAgICAgICBpZD1bNDJdLAogICAgICAgICAgICAgICAgICAgIHJlYXNvbj10eXBlcy5JbnB1dFJlcG9ydFJlYXNvbklsbGVnYWxEcnVncygpLAogICAgICAgICAgICAgICAgICAgIG1lc3NhZ2U9bWVzc2FnZQogICAgICAgICAgICAgICAgKSkKICAgICAgICAgICAgICAgICAgICBwcmludCAoZiJ7bHJkfVt7bGdufSt7bHJkfV0ge2dufUEgSWxsZWdhbCBEcnVncyByZXBvcnQgaGFzIGJlZW4gc2VudCIpCiAgICAgICAgICAgIGVsaWYgc2VsZi5tZXRob2QgPT0gIjkiOgogICAgICAgICAgICAgICAgbWVzc2FnZSA9ICJCbG9jayB0aGlzIGNoYW5uZWwgYmVjYXVzZSBvZiBQZXJzb25hbERldGFpbHMgIiAgICAgICAgICAgIAogICAgICAgICAgICAgICAgZm9yIF8gaW4gcmFuZ2UoMCxpbnQoc2VsZi5udW1iZXIpKTogCiAgICAgICAgICAgICAgICAgICAgcmVzdWx0ID0gY2xpZW50KGZ1bmN0aW9ucy5tZXNzYWdlcy5SZXBvcnRSZXF1ZXN0KAogICAgICAgICAgICAgICAgICAgIHBlZXI9Y2hhbm5lbF9lbnRpdHksCiAgICAgICAgICAgICAgICAgICAgaWQ9WzQyXSwKICAgICAgICAgICAgICAgICAgICByZWFzb249dHlwZXMuSW5wdXRSZXBvcnRSZWFzb25QZXJzb25hbERldGFpbHMoKSwKICAgICAgICAgICAgICAgICAgICBtZXNzYWdlPW1lc3NhZ2UKICAgICAgICAgICAgICAgICkpCiAgICAgICAgICAgICAgICAgICAgcHJpbnQgKGYie2xyZH1be2xnbn0re2xyZH1dIHtnbn1BIFBlcnNvbmFsIERldGFpbHMgcmVwb3J0IGhhcyBiZWVuIHNlbnQiKQogICAgICAgICAgICAgICAgcHJpbnQgKGYiXG5cbntrfUVuZCBvZiByZXBvcnRzICEiKQpyZXBvcnRlciA9IFRlbGVncmFtUmVwb3J0ZXIoKQpyZXBvcnRlci5yZXBvcnRfY2hhbm5lbCgpCg=='))
+	{lrd}[{lgn}+{lrd}] {gn}Channel : {lgn}@AMBOTYT	
+			"""	 
+			
+class TelegramReporter:
+    def __init__(self):
+        self.api_id = input(f"{lrd}[{lgn}+{lrd}] {gn}Enter Api id account: {g}")
+        self.api_hash = input(f"{lrd}[{lgn}+{lrd}] {gn}Enter Api hash account: {g}")
+        self.phone_number = input(f"{lrd}[{lgn}+{lrd}] {gn}Enter phone account:{g} ")
+        clear()
+        re(account)
+        print (f"{lrd}")
+        print (t)
+        self.method = input(f"{lrd}[{lgn}?{lrd}] {gn}Choose a method : {k}")
+        self.channel_username = input(f"{lrd}[{lgn}+{lrd}] {gn}Enter username channel {k}")
+        self.number = input(f"{lrd}[{lgn}+{lrd}] {gn}Number of reports: {k}")
+        self.client = TelegramClient('session', self.api_id, self.api_hash)
+    def report_channel(self):
+        with self.client as client:
+            client.connect()
+            if not client.is_user_authorized():
+                client.send_code_request(self.phone_number)
+                client.sign_in(self.phone_number, input('Enter the code: '))
+            try:channel_entity = client.get_entity(self.channel_username)
+            except:print (f"{lrd}Username does not exist")
+            if self.method == "1":
+                message = "This channel contains spam content."
+                for _ in range(0,int(self.number)): 
+                    result = client(functions.messages.ReportRequest(
+                    peer=channel_entity,
+                    id=[42],
+                    reason=types.InputReportReasonSpam(),
+                    message=message
+                ))
+                    print (f"{lrd}[{lgn}+{lrd}] {gn}A spam report has been sent")            
+            elif self.method == "2":
+                message = input(f"{lrd}[{lgn}+{lrd}] {gn}Enter your message: {g}")
+                for _ in range(0,int(self.number)): 
+                     result = client(functions.messages.ReportRequest(
+                    peer=channel_entity,
+                    id=[42],
+                    reason=types.InputReportReasonOther(),
+                    message=message
+                ))
+                     print (f"\{lrd}[{lgn}+{lrd}] {gn}A Other report has been sent")
+            elif self.method == "3":
+                message = "This channel contains violent content."            
+                for _ in range(0,int(self.number)): 
+                     result = client(functions.messages.ReportRequest(
+                    peer=channel_entity,
+                    id=[42],
+                    reason=types.InputReportReasonViolence(),
+                    message=message
+                ))
+                     print (f"\{lrd}[{lgn}+{lrd}] {gn}A Violence report has been sent") 
+            elif self.method == "4":
+                message = "This channel has pornographic content"
+                for _ in range(0,int(self.number)): 
+                    result = client(functions.messages.ReportRequest(
+                    peer=channel_entity,
+                    id=[42],
+                    reason=types.InputReportReasonPornography(),
+                    message=message
+                ))
+                    print (f"{lrd}[{lgn}+{lrd}] {gn}A Pornogaphy report has been sent")
+            elif self.method == "5":
+                message = "Block this channel due to copyright"            
+                for _ in range(0,int(self.number)): 
+                    result = client(functions.messages.ReportRequest(
+                    peer=channel_entity,
+                    id=[42],
+                    reason=types.InputReportReasonCopyright(),
+                    message=message
+                ))
+                    print (f"{lrd}[{lgn}+{lrd}] {gn}A Copy right report has been sent")
+            elif self.method == "6":
+                message = "Block this channel due to scam and impersonation"            
+                for _ in range(0,int(self.number)): 
+                    result = client(functions.messages.ReportRequest(
+                    peer=channel_entity,
+                    id=[42],
+                    reason=types.InputReportReasonFake(),
+                    message=message
+                ))
+                    print (f"{lrd}[{lgn}+{lrd}] {gn}A Fake report has been sent ")
+            elif self.method == "7":
+                message = "Block this channel due to irrelevant geo "            
+                for _ in range(0,int(self.number)): 
+                    result = client(functions.messages.ReportRequest(
+                    peer=channel_entity,
+                    id=[42],
+                    reason=types.InputReportReasonGeoIrrelevant(),
+                    message=message
+                ))
+                    print (f"{lrd}[{lgn}+{lrd}] {gn}A Geo Irrelevant report has been sent")
+            elif self.method == "8":
+                message = "Block this channel because of IllegalDrugs "            
+                for _ in range(0,int(self.number)): 
+                    result = client(functions.messages.ReportRequest(
+                    peer=channel_entity,
+                    id=[42],
+                    reason=types.InputReportReasonIllegalDrugs(),
+                    message=message
+                ))
+                    print (f"{lrd}[{lgn}+{lrd}] {gn}A Illegal Drugs report has been sent")
+            elif self.method == "9":
+                message = "Block this channel because of PersonalDetails "            
+                for _ in range(0,int(self.number)): 
+                    result = client(functions.messages.ReportRequest(
+                    peer=channel_entity,
+                    id=[42],
+                    reason=types.InputReportReasonPersonalDetails(),
+                    message=message
+                ))
+                    print (f"{lrd}[{lgn}+{lrd}] {gn}A Personal Details report has been sent")
+                print (f"\n\n{k}End of reports !")
+reporter = TelegramReporter()
+reporter.report_channel()
